@@ -53,3 +53,5 @@ lsof -i
 # -p : Show the PID and name of the program to which each socket belongs
 ```
 Good link to find more [here](https://explainshell.com/)
+
+[Back to Index](README.md)

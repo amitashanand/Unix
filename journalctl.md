@@ -83,5 +83,5 @@ journalctl -n 20 #soecify entries
 sudo journalctl --vacuum-size=1G
 sudo journalctl --vacuum-time=1years
 ``` 
-
+[Back to Index](README.md)
 
