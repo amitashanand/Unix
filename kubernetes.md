@@ -55,3 +55,37 @@ NodePort: Exposes the service on each Node’s IP at a static port (the NodePort
 ClusterIP: Exposes the service on a cluster-internal IP. Choosing this value makes the service only reachable from within the cluster. This is the default ServiceType
 
 LoadBalancer: Exposes the service externally using a cloud provider’s load balancer. NodePort and ClusterIP services, to which the external load balancer will route, are automatically created.
+
+
+## Some used command
+
+```
+kubectl describe pod newpod
+kubectl run redis --image=redis123 --dry-run=client -o yaml >pod.yaml
+
+kubectl create -f .\replicaset.yaml
+kubectl get replicaset 
+kubectl delete pod myapp-replicaset-c254j
+kubectl describe replicaset myapp-replicaset
+edit replicaset myapp-replicaset
+kubectl scale replicaset myapp-replicaset --replicas=2
+
+ kubectl explain replicaset|grep VERSION
+ kubectl delete replicaset
+ kubectl edit replicaset new-replica-set
+ kubectl get all
+ kubectl get deployment
+
+ kubectl describe deployments.apps name | grep -i image
+
+ kubectl run nginx --image=nginx    ----- creates deployment
+
+ kubectl create -f deployment.yaml
+ kubectl rollout status deployment.apps/myapp-deployment
+ kubectl rollout history deployment.apps/myapp-deployment
+
+ kubectl edit deployment myapp-deployment --record
+ kubectl rollout undo deployment/myapp-deployment 
+ kubectl get svc
+
+```
