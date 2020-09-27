@@ -34,6 +34,7 @@ Usually you don't need to create Pods directly, even singleton Pods. Instead, cr
 * **ReplicaSet** : A ReplicaSet's purpose is to maintain a stable set of replica Pods running at any given time. As such, it is often used to guarantee the availability of a specified number of identical Pods.
 A ReplicaSet ensures that a specified number of pod replicas are running at any given time. However, a Deployment is a higher-level concept that manages ReplicaSets and provides declarative updates to Pods along with a lot of other useful features. Therefore, we recommend using Deployments instead of directly using ReplicaSets, unless you require custom update orchestration or don't require updates at all.
 This actually means that you may never need to manipulate ReplicaSet objects: use a Deployment instead, and define your application in the spec section.
+![image](./images/replica-pod.png)
 * **Deployments** : A Deployment provides declarative updates for Pods ReplicaSets.Deployment is at highe-level than replcaset. It provide us with the capabilities to upgrade theunderlying instances seamlessly usingrolling updates, undo changes and pause and resume changes to deployments [More info](https://kubernetes.io/docs/concepts/workloads/controllers/deployment/)
 
 ## Service
